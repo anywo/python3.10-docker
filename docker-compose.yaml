@@ -17,6 +17,6 @@ services:
       - "DISPLAY=${DISPLAY}"
       - "GDK_SCALE"
       - "GDK_DPI_SCALE"
-      - "QT_DEBUG_PLUGINS=1"
+      # - "QT_DEBUG_PLUGINS=1" # qt调试
     entrypoint:
       - "bash"
