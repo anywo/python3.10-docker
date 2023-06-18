@@ -1,0 +1,22 @@
+version: '3.0'
+services:
+  py:
+    # image: python:3.10
+    build:
+      context: .
+    network_mode: host
+    tty: true
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix # 显示器共享
+      - .pip:/root/.pip
+      - .local:/root/.local
+      - .cache:/root/.cache
+      - ${HOME}:/root/u
+      - .bashrc:/root/.bashrc
+    environment:
+      - "DISPLAY=${DISPLAY}"
+      - "GDK_SCALE"
+      - "GDK_DPI_SCALE"
+      - "QT_DEBUG_PLUGINS=1"
+    entrypoint:
+      - "bash"

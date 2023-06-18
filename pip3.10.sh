@@ -1,0 +1,1 @@
+docker compose -f "${HOME}/workspace/python/3.10/docker-compose.yaml" run --rm py -c "pip3 $*"
