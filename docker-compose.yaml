@@ -13,6 +13,7 @@ services:
       - .cache:/root/.cache
       - ${HOME}:/root/u
       - .bashrc:/root/.bashrc
+      - ${HOME}/下载:${HOME}/downloads
     environment:
       - "DISPLAY=${DISPLAY}"
       - "GDK_SCALE"
